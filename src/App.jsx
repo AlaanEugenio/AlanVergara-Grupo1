@@ -1,9 +1,10 @@
 import React from "react";
-import Inicio from "./Components/Inicio/Inicio";
+import Inicio from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
-import Productspage from "./Components/Products/Products";
+import Productspage from "./Components/Productos/Productos";
 import Contacto from "./Components/Contacto/Contacto";
+import ItemDetail from "./Components/ItemDetail/ItemDetail";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Inicio />} />
-          <Route path="/Products" element={<Productspage />} />
+          <Route path="/Productos" element={<Productspage />} />
           <Route path="/Contacto" element={<Contacto />} />
+          <Route path="/productos/:productId" element={<ItemDetail />} />
         </Routes>
         <Footer />
       </BrowserRouter>

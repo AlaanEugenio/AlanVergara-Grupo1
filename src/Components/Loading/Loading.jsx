@@ -1,8 +1,8 @@
-import { MoonLoader, PulseLoader } from "react-spinners";
+import { FadeLoader } from "react-spinners";
 export default function Loading() {
   return (
     <div className="container mx-auto max-w-[1170px] flex justify-center items-center h-[50vh]">
-      <MoonLoader color="#2D3A4B" size="50" />
+      <FadeLoader color="#3040d3" size="25" />
     </div>
   );
 }

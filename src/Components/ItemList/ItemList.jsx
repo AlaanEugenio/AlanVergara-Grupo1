@@ -8,10 +8,15 @@ export default function ItemList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getProducts().then((data) => {
-      setProducts(data);
-      setLoading(false);
-    });
+    getProducts()
+      .then((data) => {
+        setProducts(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error al obtener productos:", error);
+        setLoading(false);
+      });
   }, []);
 
   return (

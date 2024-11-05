@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Item({ id, name, price, img }) {
   return (
     <div className="bg-blue-950 shadow-lg rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105 hover:shadow-xl flex flex-col items-stretch">
-      <Link to={`/products/${id}`}>
+      <Link to={`/productos/${id}`}>
         <img
           className="w-full h-auto object-cover"
           src={img}
@@ -13,7 +13,7 @@ export default function Item({ id, name, price, img }) {
       <div className="p-1">
         {" "}
         <Link
-          to={`/products/${id}`}
+          to={`/productos/${id}`}
           className="text-lg font-semibold tracking-wide uppercase text-white hover:text-blue-300"
         >
           {name}
