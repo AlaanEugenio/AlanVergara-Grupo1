@@ -29,7 +29,7 @@ export default function Cart() {
         <p className="text-white">Tu carrito está vacío.</p>
       ) : (
         <div>
-          <ul className="divide-y divide-gray-300">
+          <ul className="divide-y text-white divide-gray-300">
             {cart.map((item) => (
               <li
                 key={item.id}
@@ -44,11 +44,11 @@ export default function Cart() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold">{item.name}</h3>
-                  <p className="text-sm text-black">
+                  <p className="text-sm text-white">
                     ${item.price.toLocaleString("es-CL")} x {item.quantity}{" "}
                     unidades
                   </p>
-                  <p className="text-sm text-black">
+                  <p className="text-sm text-white">
                     Subtotal: $
                     {(item.price * item.quantity).toLocaleString("es-CL")}
                   </p>
@@ -79,7 +79,7 @@ export default function Cart() {
           </ul>
 
           <div className="mt-6">
-            <p className="text-lg font-bold">
+            <p className="text-lg text-white font-bold">
               Total: ${total.toLocaleString("es-CL")}
             </p>
             <button
