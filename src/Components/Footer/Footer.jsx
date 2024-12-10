@@ -4,17 +4,21 @@ const Logo = "/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-950 text-white py-4">
-      <div className="container mx-auto text-center">
-        <p className="mb-2">
-          © 2024 Cubos Manía. Todos los derechos reservados.
-        </p>
-        <div className="container mx-auto max-w-[100px]">
-          <img src={Logo} alt="Logo Principal" />
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-grow"></main>
+
+      <footer className="bg-blue-950 text-white py-4">
+        <div className="container mx-auto flex items-center justify-between px-4">
+          <div className="flex items-center">
+            <img src={Logo} alt="Logo Principal" className="w-20 h-20" />
+          </div>
+
+          <p className="text-lg font-semibold uppercase">
+            © 2024 Cubos Manía. Todos los derechos reservados.
+          </p>
         </div>
-        <div className="flex justify-center space-x-4"></div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   );
 };
 
